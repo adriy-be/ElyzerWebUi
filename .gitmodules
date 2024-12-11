@@ -1,0 +1,3 @@
+[submodule "Elyzer"]
+	path = Elyzer
+	url = https://github.com/adriy-be/Elyzer.git

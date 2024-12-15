@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 import uuid
 import subprocess
-from ansi2html import Ansi2HTMLConverter
+import os
 
 app = Flask(__name__)
 
@@ -15,7 +15,7 @@ def submit_text():
         f.write(text + '\n')
     result = subprocess.run(f'script -q -c "python ./Elyzer/elyzer.py -f {uid}.txt" /dev/null | aha', 
                             shell=True, capture_output=True, text=True)
-    subprocess.run(f'rm {uid}.txt', shell=True)
+    os.remove(f'{uid}.txt')
     return result.stdout.replace('olive', 'orange')
 
 @app.route('/')
@@ -23,4 +23,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5000, host='0.0.0.0')

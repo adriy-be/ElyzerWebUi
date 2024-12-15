@@ -24,4 +24,4 @@ docker compose up
 Once the application is running with Docker Compose, you can access it by navigating to [http://127.0.0.1:5080](http://127.0.0.1:5080) in your web browser.
 
 
-[![Screenshot-2024-12-11-214300](https://i.ibb.co/Kqwm14j/Screenshot-2024-12-11-214300.png)](https://ibb.co/R0y75rp)
+[![tG4oZ6bNiS.png](https://i.imgur.com/P4Dgxavm.jpg)](https://i.imgur.com/P4Dgxav.png)

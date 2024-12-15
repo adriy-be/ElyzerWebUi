@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y aha && rm -rf /var/lib/apt/lists/*
 # Set the working directory in the container
 WORKDIR /app
 
-COPY Elyzer/* Elyzer/
+COPY Elyzer/ Elyzer/
 COPY WebUI/requirements.txt requirements.txt
 
 # Install the dependencies
